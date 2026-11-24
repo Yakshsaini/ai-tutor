@@ -13,6 +13,13 @@ import settings from './routes/settings.js';
 import { errorHandler, notFound } from './middleware/errors.js';
 
 const app = express();
+app.get('/', (req, res) => {
+  res.json({
+    success: true,
+    message: 'LearnMate AI Backend is running!',
+    status: 'Live'
+  });
+});
 mongoose.set('bufferCommands', false); // fail fast (clear 503) instead of hanging when MongoDB is down
 
 app.use(helmet());
