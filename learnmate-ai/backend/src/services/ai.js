@@ -485,4 +485,6 @@ export {
   makeQuiz,
   makePlan,
   resolveMode,
+  geminiConfigured,
+  modelName,
 };
